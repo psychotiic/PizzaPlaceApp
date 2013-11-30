@@ -1,6 +1,6 @@
 window.onload=function(){
-	localStorage.setItem('username','test');
-	localStorage.setItem('password','test');
+	//localStorage.setItem('username','test');
+	//localStorage.setItem('password','test');
 }
 
 function login(){
@@ -9,7 +9,7 @@ function login(){
 	if($('input[id=username]').val() == username && $('input[id=password]').val() == password)
 	{
 	alert("Welcome Back " + username);
-	window.location = ("./index.html");
+	window.location = ("./order.html");
 	}
 	else
 	{
@@ -28,11 +28,10 @@ function registerAccount(){
         if($('input[id=passwordREG]').val().trim() !="")
         {
         var pass = $('input[id=passwordREG]').val();
-		
 		localStorage.setItem('username',user);
         localStorage.setItem('password',pass);
         alert("Registration Success!");
-       // logout();//code reuse sends user to login :)
+        logout();//code reuse sends user to login :)
 	   window.location =("./index.html");
 	   
         }
