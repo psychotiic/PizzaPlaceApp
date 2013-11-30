@@ -1,73 +1,32 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-	<title>P & T's Pizza Emporium</title>
+	<title>D & T's Pizza Emporium</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   
-	<link rel="stylesheet" href="./lib/jqm/jquery.mobile-1.3.1.css" />
+	<!--<link rel="stylesheet" href="./lib/jqm/jquery.mobile-1.3.1.css" />-->
+	<link rel="stylesheet" href="theme.css">
     <script src="./lib/jquery-1.10.1.js"></script>
-    <script src="./lib/jqm/jquery.mobile-1.3.1.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+    <!-- <script src="./lib/jqm/jquery.mobile-1.3.1.js"></script>-->
 
 </head> 
 <body> 
-<script src="http://debug.phonegap.com/target/target-script-min.js#anonymous"></script>
-	<script type="text/javascript" src="index.js">
-	
-	</script>
 	<div data-role="page" id="loginPage">
 		<div id="loginControls">
-			<div data-role="header"><h1>P & T's Pizza Emporium</h1></div>
+			<div data-role="header"><h1>D & T's Pizza Emporium</h1></div>
 			Username<input type="text" id="username"/>
 			Password<input type="password"  id="password"/>
 			<div id="loginButton">
-				<button type="submit" onclick="login()"/>Login
+				<button type="submit" onclick="login()"/>Login</button>
 			</div>
-			<br/>
 			<div id="register">
-				<button type="submit" onclick="registerAccountPage()"/> Register New Account
+				<button type="submit" onclick="registerAccountPage()"/> Register New Account</button>
 			</div>
-			<div data-role="footer" position="fixed"><h4>Copyright 2013 P & T's Pizza Emporium(c)</div>
 		</div>
 	
 	</div> <!--login-->
-	<div data-role="page" id="quotePage"> <!-- order form -->
-
-	<div data-role="header">
-		<h1>Place Your Order</h1>
-		<button id="logoutButton" type="submit" onClick="logout()"/>Logout<br/>
-	</div><!-- /header -->
-
-	<div data-role="content">	
-	<div style="padding:16px;">
-    Stock Ticker : <input id="symb" type="textbox" value="FB"></input>
-	</div>
-	<button id="getupdate" name = "getupdate" type="button" onClick="run()">Add To Cart</button><br/>
-	
-	<button id="getupdate" name = "getupdate" type="button" onClick="run()">Checkout</button><br/>
-	
-	
-	<div id="stock">
-    
-	</div>
-	<div data-role="footer" position="fixed">
-		<h4>Copyright 2013 P & T's Pizza Emporium(c)
-	</div><!-- /footer -->
-	</div><!-- /content -->
-	</div><!-- /page -->
-	
-	<div data-role="page" id="registerPage">
-		<div data-role="header"><h1>P & T's Pizza Emporium</h1></div><br/>
-		<h3> Become a new customer...</h3><br/>
-		Enter Username<input type="text" for Username: id="usernameREG"/>
-		Enter Password<input type="password" for Password: id="passwordREG"/>
-		<!-- Confirm Password<input type="password" for Password: id="confirmPassREG"/> -->
-		<div id="regButton">
-			<button id="registerButton" type="submit" onClick="registerAccount()"/>Register
-		</div>
-	</div>
-
-
 </body>
 </html>

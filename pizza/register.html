@@ -4,17 +4,11 @@
 	<title>D & T's Pizza Emporium</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<style type="text/css">
-		.centered{
-			 position: absolute;
-             top: 50%;
-             left: 50%;
-             margin-top: -230px;
-             margin-left: -420px;
-		}	
-	</style>
 	<link rel="stylesheet" href="theme.css">
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	 <script src="./lib/jquery-1.10.1.js"></script>
+   <!-- <script src="./lib/jqm/jquery.mobile-1.3.1.js"></script> -->
+	
 </head>
 <body class="centered">
 	<div id="registerBody">
@@ -24,7 +18,8 @@
 		Enter Password<input type="password" for Password: id="passwordREG"/>
 		<!-- Confirm Password<input type="password" for Password: id="confirmPassREG"/> -->
 		<div id="regButton">
-			<button id="registerButton" type="submit" onClick="registerAccount()"/>Register
+			<button id="registerButton" type="submit" onClick="registerAccount()"/>Register</button>
+			<button id="cancelButton" type="submit" onClick="cancel()"/>Cancel</button>
 		</div>
 	</div>
 </body>
