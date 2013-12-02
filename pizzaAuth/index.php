@@ -96,7 +96,7 @@ header('location: order.php');
 		<!-- Confirm Password<input type="password" for Password: id="confirmPassREG"/> -->
 		<div id="regButton">
 			<button name="loginButton" id="loginButton" class="btn" type="submit" />Login
-			<a href="register.php"> <button id="registerButton" type="submit" class="btn" "/>Register</a>
+			<a href="register.php"> <button id="registerButton" type="submit" class="btn" />Register</a>
 		</div>
 	</div></div>
 	</form>
