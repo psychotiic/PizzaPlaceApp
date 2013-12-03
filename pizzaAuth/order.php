@@ -21,31 +21,35 @@ if ($user -> LoggedIn())
 
 </head>
 <body>
-<form>
+<form method="post">
 <?php 
-
+$Username = $_SESSION['username'];
+if(strlen($Username) == 0)
+{
+echo "This is not a valid login, Redirecting to login...";
+   header('location: index.php');	
+}
 if (isset($_POST['pizzaButton']))
 {
-	echo "<script>blah = window.open('./orderPizza.php')</script>"; 	
+	echo "<script>popup = window.open('./orderPizza.php')</script>"; 
 	//echo"Test";
 }
 if (isset($_POST['wingsButton']))
 {
-	echo "<script>blah = window.open('./orderWings.php')</script>"; 	
+	echo "<script>popup = window.open('./orderWings.php')</script>"; 	
 	//echo"Test";
 }
 if (isset($_POST['sodaButton']))
 {
-	echo "<script>blah = window.open('./orderSoda.php')</script>"; 	
+	//echo "<script>popup = window.open('./orderSoda.php')</script>"; 	
 	//echo"Test";
+	echo $Username;
 }
 
 if (isset($_POST['logoutButton']))
 {
 	header('location: unset.php');
 }
-
-
 
 ?>
 
@@ -54,7 +58,7 @@ if (isset($_POST['logoutButton']))
 		<a href="unset.php" ><button name="logoutButton" id="Logout" type="submit" class="btn" value="logout"  
 								     style="float:right;margin-top:18px;"/>Logout</button></a>
 									 
-		<h1 style="float:left;margin-top:18px;"> User ID: <?php echo $_SESSION['username']; ?> &nbsp;</h1><br /><br/><br/><br/>
+		<h1 style="float:left;margin-top:18px;"> Username: <?php echo $_SESSION['username']; ?> &nbsp;</h1><br /><br/><br/><br/>
 		
 		<hr color="#ffff00" size="50">
 		<div id="buttons"  style="float:left;margin-top:21px;">

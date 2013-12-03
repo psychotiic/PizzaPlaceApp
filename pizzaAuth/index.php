@@ -52,7 +52,7 @@ if (!($user -> LoggedIn()))
 				$SQLGetInfo -> execute(array(':username' => $username, ':password' => $password));
 				$userInfo = $SQLGetInfo -> fetch(PDO::FETCH_ASSOC);
 					$_SESSION['username'] = $userInfo['username'];
-					echo '<center><div class="alert green ">Thanks $username! </h4> Logging In.. <meta http-equiv="refresh" content="3;url=order.php"></div><center>';
+					echo '<center><div class="alert green ">Welcome Back! </h4> Logging In... <meta http-equiv="refresh" content="3;url=order.php"></div><center>';
 			}
 			else
 			{
