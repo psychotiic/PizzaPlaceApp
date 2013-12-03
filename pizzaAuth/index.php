@@ -25,6 +25,7 @@ require 'db.php';
 <?php	
 if (!($user -> LoggedIn()))
 {
+		
 	if (isset($_POST['loginButton']))
 	{
 		$username = $_POST['username'];
@@ -32,7 +33,7 @@ if (!($user -> LoggedIn()))
 		$errors = array();
 		if (!ctype_alnum($username) || strlen($username) < 2 || strlen($username) > 15)
 		{
-			$errors[] = 'Username Must Be  Alphanumberic And 4-15 characters in length';
+			$errors[] = 'Username Must Be  Alphanumeric And 4-15 characters in length';
 		}
 		
 		if (empty($username) || empty($password))
@@ -51,20 +52,7 @@ if (!($user -> LoggedIn()))
 				$SQLGetInfo -> execute(array(':username' => $username, ':password' => $password));
 				$userInfo = $SQLGetInfo -> fetch(PDO::FETCH_ASSOC);
 					$_SESSION['username'] = $userInfo['username'];
-					//$_SESSION['ID'] = $userInfo['id'];
-					echo '<center><div class="alert green ">Success! </h4>Logging In.. <meta http-equiv="refresh" content="3;url=order.php"></div><center>';
-				
-				/*if ($userInfo['status'] == 0)
-				{
-					$_SESSION['username'] = $userInfo['username'];
-					$_SESSION['ID'] = $userInfo['ID'];
-					echo '<center><div class="alert green ">Success! </h4>Logging In.. <meta http-equiv="refresh" content="3;url=order.php"></div><center>';
-				    //header('location: order.php');
-				}
-				else
-				{
-					echo '<center><div class="alert red "><p><strong>Error!: </strong>Your user was banned</p></div></center>';
-				} */
+					echo '<center><div class="alert green ">Thanks $username! </h4> Logging In.. <meta http-equiv="refresh" content="3;url=order.php"></div><center>';
 			}
 			else
 			{
@@ -81,9 +69,14 @@ if (!($user -> LoggedIn()))
 			echo '</div></center>';
 		}
 	}
+	
 }else{
 header('location: order.php');
 }
+if (isset($_POST['registerButton']))
+	{
+		header('location: register.php');
+	}
 
 ?>
 
@@ -96,7 +89,10 @@ header('location: order.php');
 		<!-- Confirm Password<input type="password" for Password: id="confirmPassREG"/> -->
 		<div id="regButton">
 			<button name="loginButton" id="loginButton" class="btn" type="submit" />Login
-			<a href="register.php"> <button id="registerButton" type="submit" class="btn" style="text-decoration:none" />Register</a>
+			<!--<button id="registerButton" type="submit" class="btn" style="text-decoration:none" /><a href="register.php"style="text-decoration:none"class="btn">Register</a> --><!--<a href="register.php" style="text-decoration:none" class="btn">  ->
+			
+			<a href="unset.php" ><button id="Logout" type="submit" class="index" value="logout"/>Logout</button></a><br /> -->
+			<!--<a href="register.php" > --><button name ="registerButton" id="registerButton" type="submit" class="btn"/ onclick="">Register</button><br/>
 		</div>
 	</div></div>
 	</form>

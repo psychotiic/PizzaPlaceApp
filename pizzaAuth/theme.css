@@ -11,7 +11,10 @@ body {
   font-family: Georgia, "Times New Roman",
         Times, serif;
   color: #FFFF00;
-  background-color: #FF0000 }
+  background-color: #FF0000 
+  
+  border-right: 22px solid #ff0000;
+border-left: 22px solid #ff0000;}
 ul.navbar {
   list-style-type: none;
   padding: 0;
@@ -102,7 +105,6 @@ address {
   background-image: linear-gradient(to bottom, #ff0000, #ff0022);
   text-decoration: none;
   color: #ffff00;
-  }
+}
+
   
- 
- 

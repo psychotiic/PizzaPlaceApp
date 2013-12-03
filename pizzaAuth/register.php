@@ -80,6 +80,11 @@ require 'db.php';
 				echo '</div>';
 			}
 		}
+		if (isset($_POST['cancelButton']))
+		{
+			header('location: index.php');
+		}
+		
 		?>
 	
 		<header><h1>P & T's Pizza Emporium</h1></header>
@@ -88,9 +93,11 @@ require 'db.php';
 		Enter Password&nbsp;&nbsp;<span style="padding-left: 3px;"><input name="password" type="password" for Password: id="passwordREG"/></span>
 		<!-- Confirm Password<input type="password" for Password: id="confirmPassREG"/> -->
 		<div id="regButton">
-			<button name="registerButton" id="registerButton" class="btn" type="submit" />Register</button>
-			<button id="cancelButton" type="submit" class="btn" onClick="cancel()"/>Cancel</button>
+			<button name="registerButton" id="registerButton" class="btn" type="submit"  />Register
+			<!--<button id="cancelButton" type="submit" class="btn" /><a href="./index.php"style="text-decoration:none"class="btn">Cancel</a>  -->
+			<button name ="cancelButton" id="cancel" type="submit" class="btn"/ onclick="">Cancel</button><br/>
 		</div>
+		
 	</div></div>
 	</form>
 </body>
