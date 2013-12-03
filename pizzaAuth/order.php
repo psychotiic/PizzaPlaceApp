@@ -31,17 +31,17 @@ echo "This is not a valid login, Redirecting to login...";
 }
 if (isset($_POST['pizzaButton']))
 {
-	echo "<script>popup = window.open('./orderPizza.php')</script>"; 
+	echo "<script>popup = window.open('./OrderPizza.html')</script>"; 
 	//echo"Test";
 }
 if (isset($_POST['wingsButton']))
 {
-	echo "<script>popup = window.open('./orderWings.php')</script>"; 	
+	echo "<script>popup = window.open('./OrderWings.html')</script>"; 	
 	//echo"Test";
 }
 if (isset($_POST['sodaButton']))
 {
-	//echo "<script>popup = window.open('./orderSoda.php')</script>"; 	
+	echo "<script>popup = window.open('./OrderSoda.html')</script>"; 	
 	//echo"Test";
 	echo $Username;
 }

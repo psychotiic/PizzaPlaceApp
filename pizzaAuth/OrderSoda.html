@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order Drinks</title>
+	<script type="text/javascript" src="./js/order.js"></script>
+	<script type="text/javascript" src="./js/drink.js"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="theme.css">
+    <script src="./lib/jquery-1.10.1.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td><input type="checkbox" value="Pepsi" class="drink">Pepsi &nbsp</td>
+				<td>
+					<select class="Pepsisize">
+						<optgroup>
+							<option value="12 ounce">12 Ounce</option>
+							<option value="24 ounce">24 Ounce</option>
+							<option value="2 liter">2 Liter</option>
+						</optgroup>
+					</select>
+				</td>
+				<td>
+					<select class="Pepsiquantity">
+						<optgroup>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</optgroup>
+					</select>
+				</td>
+				<td>&nbsp Diet <input type="checkbox" value="Pepsi" class="dietPepsi"> </td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" value="Coke" class="drink">Coke &nbsp</td>
+				<td>
+					<select class="Cokesize">
+						<optgroup>
+							<option value="12 ounce">12 Ounce</option>
+							<option value="24 ounce">24 Ounce</option>
+							<option value="2 liter">2 Liter</option>
+						</optgroup>
+					</select>
+				</td>
+				<td>
+					<select class="Cokequantity">
+						<optgroup>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</optgroup>
+					</select>
+				</td>
+				<td>&nbsp Diet <input type="checkbox" value="Coke" class="dietCoke"> </td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" value="Mountain Dew" class="drink">Mountain Dew &nbsp</td>
+				<td>
+					<select  class="Mountain Dewsize">
+						<optgroup>
+							<option value="12 ounce">12 Ounce</option>
+							<option value="24 ounce">24 Ounce</option>
+							<option value="2 liter">2 Liter</option>
+						</optgroup>
+					</select>
+				</td>
+				<td>
+					<select class="Mountain Dewquantity">
+						<optgroup>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</optgroup>
+					</select>
+				</td>
+				<td>&nbsp Diet <input type="checkbox" value="Mountain Dew" class="dietMountain Dew"> </td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" value="Dr Pepper" class="drink">Dr Pepper &nbsp</td>
+				<td>
+					<select class="Dr Peppersize">
+						<optgroup>
+							<option value="12 ounce">12 Ounce</option>
+							<option value="24 ounce">24 Ounce</option>
+							<option value="2 liter">2 Liter</option>
+						</optgroup>
+					</select>
+				</td>
+				<td>
+					<select class="Dr Pepperquantity">
+						<optgroup>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</optgroup>
+					</select>
+				</td>
+				<td>&nbsp Diet <input type="checkbox" value="Dr Pepper" class="dietDr Pepper"> </td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" value="Water" class="drink">Water &nbsp</td>
+				<td>
+					<select class="Watersize">
+						<optgroup>
+							<option value="12 ounce">12 Ounce</option>
+							<option value="24 ounce">24 Ounce</option>
+							<option value="1 liter">1 Liter</option>
+						</optgroup>
+					</select>
+				</td>
+				<td>
+					<select class="Waterquantity">
+						<optgroup>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</optgroup>
+					</select>
+				</td>
+				<td>&nbsp</td>
+			</tr>
+		</table>
+		<!--<input type="button" onclick="submitDrinks();" value="Add to cart"> -->
+		<input name="placeSodaOrder" type="submit" onclick="submitDrinks();" value="Add to cart" class="btn">
+	</form>
+</body>
+</html>

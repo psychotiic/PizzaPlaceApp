@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order Wings</title>
+	<script type="text/javascript" src="./js/order.js"></script>
+	<script type="text/javascript" src="./js/wing.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="theme.css">
+    <script src="./lib/jquery-1.10.1.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td><input type="checkbox" value="BBQ" class="wing">BBQ &nbsp</td>
+				<td>
+					<select class="BBQsize">
+						<optgroup>
+							<option value="6 Piece">6 Piece</option>
+							<option value="12 Piece">12 Piece</option>
+							<option value="20 Piece">20 Piece</option>
+							<option value="30 Piece">30 Piece</option>
+						</optgroup>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" value="Buffalo - Mild" class="wing">Buffalo - Mild &nbsp</td>
+				<td>
+					<select class="Buffalo - Mildsize">
+						<optgroup>
+							<option value="6 Piece">6 Piece</option>
+							<option value="12 Piece">12 Piece</option>
+							<option value="20 Piece">20 Piece</option>
+							<option value="30 Piece">30 Piece</option>
+						</optgroup>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" value="Buffalo - Hot" class="wing">Buffalo - Hot &nbsp</td>
+				<td>
+					<select class="Buffalo - Hotsize">
+						<optgroup>
+							<option value="6 Piece">6 Piece</option>
+							<option value="12 Piece">12 Piece</option>
+							<option value="20 Piece">20 Piece</option>
+							<option value="30 Piece">30 Piece</option>
+						</optgroup>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" value="Teryaki" class="wing">Teryaki &nbsp</td>
+				<td>
+					<select class="Teryakisize">
+						<optgroup>
+							<option value="6 Piece">6 Piece</option>
+							<option value="12 Piece">12 Piece</option>
+							<option value="20 Piece">20 Piece</option>
+							<option value="30 Piece">30 Piece</option>
+						</optgroup>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" value="Lemon Pepper" class="wing">Lemon Pepper &nbsp</td>
+				<td>
+					<select class="Lemon Peppersize">
+						<optgroup>
+							<option value="6 Piece">6 Piece</option>
+							<option value="12 Piece">12 Piece</option>
+							<option value="20 Piece">20 Piece</option>
+							<option value="30 Piece">30 Piece</option>
+						</optgroup>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<!--<input type="button" onclick="submitWings();" value="Add to cart"> -->
+		<input name="placeWingsOrder" type="submit" onclick="submitWings();" value="Add to cart" class="btn">
+	</form>
+</body>
+</html>

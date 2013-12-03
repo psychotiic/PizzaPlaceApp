@@ -16,7 +16,7 @@ require 'db.php';
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="theme.css">
     <script src="./lib/jquery-1.10.1.js"></script>
-	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
 
 
 </head> 
