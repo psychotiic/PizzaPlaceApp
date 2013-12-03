@@ -31,7 +31,7 @@ echo "This is not a valid login, Redirecting to login...";
 }
 if (isset($_POST['pizzaButton']))
 {
-	echo "<script>popup = window.open('./OrderPizza.html')</script>"; 
+	echo "<script>popup = window.open('./OrderPizza.php')</script>"; 
 	//echo"Test";
 }
 if (isset($_POST['wingsButton']))
@@ -43,7 +43,7 @@ if (isset($_POST['sodaButton']))
 {
 	echo "<script>popup = window.open('./OrderSoda.html')</script>"; 	
 	//echo"Test";
-	echo $Username;
+	//echo $Username;
 }
 
 if (isset($_POST['logoutButton']))
@@ -52,7 +52,6 @@ if (isset($_POST['logoutButton']))
 }
 
 ?>
-
 
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="unset.php" ><button name="logoutButton" id="Logout" type="submit" class="btn" value="logout"  
@@ -67,7 +66,10 @@ if (isset($_POST['logoutButton']))
             <button name="sodaButton" id="sodaButton" type="submit" class="index" onClick="#"/>Soda</button><br />
             <button id="CartButton" type="submit" class="index" onClick="#"/>Cart</button><br />
             <button id="CheckoutButton" type="submit" class="index" onClick="#"/>Checkout</button><br />
-			<br/>
+			<br/> 
+			
+					<?php echo $_SESSION['order']; ?>
+
 		</div><br /><br/><br/><br/><br /><br/><br/><br/><br /><br/><br/><br/><br /><br/><br/><br/><br /><br/><br/><br/><br /><br/><br/><br/><br/>
 		<hr color="#ffff00" size="20">
 		</form>

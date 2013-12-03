@@ -15,7 +15,8 @@ function submitPizza(){
 	var pz = new pizza(toppingList);
 
 	<!-- Access Pizza ordered -->
-	alert(pz.order());
+	//alert(pz.order());
+	document.getElementById('outputParagraph').innerHTML=pz.order();
 }
 
 function submitDrinks(){
